@@ -9,9 +9,8 @@
  class zendsiteController extends AbstractActionController
  {
 
-    public function indexAction()
+    public function AddAction()
     {
 
     }
-
  }
