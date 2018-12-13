@@ -1,24 +1,40 @@
-<?php
+<?php /*var_dump("fff");die;*/
 return array(
 'controllers' => array(
   'invokables' => array('zendsite\Controller\zendsite' => 'zendsite\Controller\zendsiteController'),
 ),
-'router'  => array(
+
+'router' => [
+    'routes' => [
+        'test' => [
+            'type' => Literal::class,
+            'options' => [
+                'route'    => '/test',
+                'defaults' => [
+                    'controller' => 'zendsite\Controller\zendsite',
+                    'action'     => 'index',
+                ],
+            ],
+        ]
+    ],
+],
+
+/*'router'  => array(
   'routers' => array(
-    'zendsite' => array(
-      'type' => 'segment',
+    'test' => array(
+      'type' => 'literal',
       'options' => array(
-        'route' => '/zendsite[/:action][/:id]',
-        'constraints' => array (
+        'route' => '/test',
+      /*  'constraints' => array (
           'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
-          'id' => '[0-9]+'),
-          'defaults' => array(
+          'id' => '[0-9]+'),*/
+          /*'defaults' => array(
             'controller' => 'zendsite\Controller\zendsite',
             'action' =>'index'),
         )
       )
     )
-  ),
+  ),*/
   'view_manager' => array('template_path_stack' => array('zendsite' => __DIR__.'/../view'),),
 
 );
