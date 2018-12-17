@@ -9,7 +9,7 @@ return array(
         'test' => [
             'type' => segment::class,
             'options' => [
-                'route'    => '/zendsite1vue',
+                'route'    => '/index',
                 'constraints' => array (
                    'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
                    'id' => '[0-9]+'),
@@ -18,9 +18,48 @@ return array(
                     'action'     => 'index',
                 ],
             ],
+        ],
+
+        'add' => [
+            'type' => segment::class,
+            'options' => [
+                'route'    => '/add',
+                'defaults' => [
+                    'controller' => 'zendsite\Controller\zendsite',
+                    'action'     => 'add',
+                ],
+            ],
         ]
     ],
 ],
+/*
+'router' => [
+    'routes' => [
+        'test' => [
+            'type' => segment::class,
+            'options' => [
+                'route'    => '/add',
+                'constraints' => array (
+                   'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                   'id' => '[0-9]+'),
+                'defaults' => [
+                    'controller' => 'zendsite\Controller\zendsite',
+                    'action'     => 'add',
+                ],
+            ],
+        ]
+    ],
+],*/
+
+
+
+
+
+
+
+
+
+
 
 /*'router'  => array(
   'routers' => array(

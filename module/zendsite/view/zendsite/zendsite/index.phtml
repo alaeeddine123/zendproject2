@@ -1,1 +1,39 @@
-welcome to the zendsite indedx view 
+
+<?php echo $this->headTitle('sites'); ?>
+<!--welcome to the zendsite add view add-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ADD item</title>
+    <div class="row">
+
+
+<div class="text-center">
+
+
+
+  <div class="col-md-12"><h1>MAIN MENU</h1></div>
+  <div class="col-md-12"><h2>Items</h2></div>
+    </div>
+  </div>
+
+  </head>
+  <body>
+
+  <table class="table">
+    <tr>
+      <td>ITEM 1</td>
+      <td>ITEM 2</td>
+      <td>ITEM 3</td>
+      <td>ITEM 4</td>
+      <td>ITEM 5</td>
+      <td>ITEM 6</td>
+    </tr>
+  <div class="col-md-8">  <a href = "<?php echo $this->url('add',array('action'=>'add')); ?>"> <b class="glyphicon glyphicon-plus"> </b>  </a>
+      <h3>add new item</h3>
+  </div>
+
+  </table>
+  </body>
+</html>
