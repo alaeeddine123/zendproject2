@@ -21,7 +21,7 @@
   </head>
   <body>
 
-  <table class="table">
+<!--  <table class="table">
     <tr>
       <td>ITEM 1</td>
       <td>ITEM 2</td>
@@ -29,7 +29,17 @@
       <td>ITEM 4</td>
       <td>ITEM 5</td>
       <td>ITEM 6</td>
-    </tr>
+    </tr> -->
+    <?php
+   $form = $this -> form;
+    $form->setAttribute('action', $this->url('zendsite',array('action'=>'add')));
+    $form->prepare();
+
+    echo $this->form()->openTag($form);
+    echo $this->formRow($form->get('item_name')) . "</br>";
+    echo $this->formRow($form->get('item_price')) . "</br>";
+    echo $this->Form()->closetag();
+     ?>
   <div class="col-md-8">  <a href = "<?php echo $this->url('add',array('action'=>'add')); ?>"> <b class="glyphicon glyphicon-plus"> </b>  </a>
       <h3>add new item</h3>
   </div>
