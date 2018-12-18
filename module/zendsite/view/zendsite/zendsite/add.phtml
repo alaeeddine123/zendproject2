@@ -1,5 +1,5 @@
 
-<?php echo $this->headTitle('sites'); ?>
+<?php echo $this->headTitle('add item'); ?>
 <!--welcome to the zendsite add view add-->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -14,7 +14,7 @@
 
 
   <div class="col-md-12"><h1>MAIN MENU</h1></div>
-  <div class="col-md-12"><h2>Items</h2></div>
+  <div class="col-md-12"><h2>Items</h2></br></div>
     </div>
   </div>
 
@@ -31,23 +31,34 @@
       <td>ITEM 6</td>
     </tr> -->
     <?php
-    $form = $this->oForm;
+     $form = $this->oForm;
      $form->setAttribute('action', $this->url('add'));
      $form->prepare();
-     $form->setAttribute('method', 'post');
+
+  /*   $form->setAttribute('method', 'post');
      $form->setAttribute('id','zfcadmin-contact');
      $form->setAttribute('autocomplete', 'off');
-     //echo $this->form()->openTag($form);
+     //echo $this->form()->openTag($form);*/
 
      echo $this->form()->openTag($form);
-    //var_dump($form);die;
-     echo $this->formElement($form->get('item_name')) . "</br>";
-     echo $this->formElement($form->get('item_price')) . "</br>";
-     echo $this->form()->closetag();
-      ?>
-     
+         ?>
+
+      <div class="text-center"> <div class="col-md-12">   <?php  echo $this->formElement($form->get('item_name')) ;?> </br>   </div> </div>
+
+      <!-- made this so that i can have spaces between input zones -->   <div class="text-center"> <div class="col-md-12"> </br> </div> </div>
+
+      <div class="text-center"> <div class="col-md-12">   <?php  echo $this->formElement($form->get('item_price')) ; ?> </br> </div> </div>
+
+      <div class="text-center"> <div class="col-md-12"> </br> </div> </div>
+
+      <div class="text-center"> <div class="col-md-12">   <?php  echo $this->formElement($form->get('item_expireddate')) ; ?> </br> </div> </div>
+
+      <div class="text-center"> <div class="col-md-12"> </br> </div> </div>
+
+      <div class="text-center"> <div class="col-md-12">   <?php  echo $this->formElement($form->get('add_item')) ; ?> </br> </div> </div>
+
+      <?php  echo $this->form()->closetag();  ?>
 
 
-  </table>
   </body>
 </html>
