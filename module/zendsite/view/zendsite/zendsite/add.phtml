@@ -1,1 +1,53 @@
-add page
+
+<?php echo $this->headTitle('sites'); ?>
+<!--welcome to the zendsite add view add-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ADD item</title>
+    <div class="row">
+
+
+<div class="text-center">
+
+
+
+  <div class="col-md-12"><h1>MAIN MENU</h1></div>
+  <div class="col-md-12"><h2>Items</h2></div>
+    </div>
+  </div>
+
+  </head>
+  <body>
+
+<!--  <table class="table">
+    <tr>
+      <td>ITEM 1</td>
+      <td>ITEM 2</td>
+      <td>ITEM 3</td>
+      <td>ITEM 4</td>
+      <td>ITEM 5</td>
+      <td>ITEM 6</td>
+    </tr> -->
+    <?php
+    $form = $this->oForm;
+     $form->setAttribute('action', $this->url('add'));
+     $form->prepare();
+     $form->setAttribute('method', 'post');
+     $form->setAttribute('id','zfcadmin-contact');
+     $form->setAttribute('autocomplete', 'off');
+     //echo $this->form()->openTag($form);
+
+     echo $this->form()->openTag($form);
+    //var_dump($form);die;
+     echo $this->formElement($form->get('item_name')) . "</br>";
+     echo $this->formElement($form->get('item_price')) . "</br>";
+     echo $this->form()->closetag();
+      ?>
+     
+
+
+  </table>
+  </body>
+</html>

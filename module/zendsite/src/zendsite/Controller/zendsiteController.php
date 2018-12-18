@@ -16,8 +16,8 @@
     }
     public function addAction()
     {
-     $add_form = new additemform ();
-     return array('form' => $add_form);
+     $add_form = new additemform();
+     return array('oForm' => $add_form);
     }
     public function editAction()
     {
