@@ -6,30 +6,43 @@ return array(
 
 'router' => [
     'routes' => [
-        'test' => [
-            'type' => segment::class,
-            'options' => [
-                'route'    => '/index',
-                'constraints' => array (
-                   'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                   'id' => '[0-9]+'),
-                'defaults' => [
-                    'controller' => 'zendsite\Controller\zendsite',
-                    'action'     => 'index',
-                ],
-            ],
-        ],
+                              'index' => [
+                                  'type' => segment::class,
+                                  'options' => [
+                                      'route'    => '/index',
+                                      'constraints' => array (
+                                         'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                                         'id' => '[0-9]+'),
+                                      'defaults' => [
+                                          'controller' => 'zendsite\Controller\zendsite',
+                                          'action'     => 'index',
+                                      ],
+                                  ],
+                              ],
 
-        'add' => [
-            'type' => segment::class,
-            'options' => [
-                'route'    => '/add',
-                'defaults' => [
-                    'controller' => 'zendsite\Controller\zendsite',
-                    'action'     => 'add',
-                ],
-            ],
-        ]
+                            'add' => [
+                                'type' => segment::class,
+                                'options' => [
+                                    'route'    => '/add',
+                                    'defaults' => [
+                                        'controller' => 'zendsite\Controller\zendsite',
+                                        'action'     => 'add',
+                                    ],
+                                ],
+                                    ]
+
+                                /*    'add' => [
+                                        'type' => segment::class,
+                                        'options' => [
+                                            'route'    => '/add',
+                                            'defaults' => [
+                                                'controller' => 'zendsite\Controller\zendsite',
+                                                'action'     => 'add',
+                                            ],
+                                        ],
+                                            ]*/
+
+
     ],
 ],
 /*
