@@ -26,6 +26,24 @@ public function __construct()
                'options' => array('label' => 'item price'   )
               )
             );
+
+
+            $this->add(array(
+
+                 'name' => 'item_id',
+                 'type' => 'number',
+                  'options' => array('label' => 'item id '   )
+                 )
+               );
+
+
+
+
+
+
+
+
+
             $this->add(array(
 
                  'name' => 'item_expireddate',
