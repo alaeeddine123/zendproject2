@@ -9,7 +9,7 @@
   */
  class zendsiteController extends AbstractActionController
  {
-
+    protected $itemtable;
     public function indexAction()
     {
 
@@ -27,7 +27,14 @@
     {
 
     }
+    public function getitemTable(){
 
+      if(!$this->itemtable){
+         $sm = $this->getserviceLocator();
+         $this->getitemTable = $sm->get('zendsite\Model\itemtable'); }
+
+      return $this-getitemTable;
+    }
 
 
  }

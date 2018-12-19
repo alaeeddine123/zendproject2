@@ -23,8 +23,13 @@ public function __construct()
 
               'name' => 'item_price',
               'type' => 'text',
-               'options' => array('label' => 'item price'   )
-              )
+               'options' => array('label' => 'item price'   ),
+               'attributes' => array(
+                     'placeholder' => 'yyyy-mm-dd'
+
+                )
+             )
+
             );
 
 
