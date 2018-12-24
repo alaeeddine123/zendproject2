@@ -1,9 +1,10 @@
 <?php
 namespace zendsite;
+use zendsite\model\item;
+use zendsite\model\itemtable;
+use Zend\Db\ResultSet\ResultSet;
+use Zend\Db\TableGateway\TableGateway;
 
-/**
- *
- */
 class Module
 {
 /*public function getAutoloaderConfig(){
@@ -36,7 +37,7 @@ return array('factories' => array(
    'zendsite\Model\itemtable' => function($sm)
     {
       $tableGateway = $sm->get('itemtablegateway');
-      $tabe = new itemtable ($tableGateway);
+      $table = new itemtable ($tableGateway);
       return $table;
       },
       'itemtablegateway' => function ($sm)

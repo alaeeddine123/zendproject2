@@ -6,7 +6,7 @@ class itemtable
 {
   protected $tableGateway;
 
-                    function __construct(tableGateway $tableGateway)
+              public      function __construct(tableGateway $tableGateway)
                     {
                       $this->tableGateway = $tableGateway ;
                     }
